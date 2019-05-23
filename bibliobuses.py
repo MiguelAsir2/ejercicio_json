@@ -36,4 +36,49 @@ while True:
         bibliotecas=autobuses[7:-2]
         for i in bibliotecas:
             print (i)
-  
+    elif opcion==2:
+        cont=0
+        print("Número de autobuses: ",end="")
+        for i in autobuses[:7]:
+            cont+=1
+        print(cont)
+        bibliotecas=autobuses[7:-2]
+        cont=0
+        print("El número de bibliotecas es: ",end="")
+        for i in bibliotecas:
+            cont+=1
+        print (cont)
+    elif opcion==3:
+        biblioteca=input("Introduce el nombre de una biblioteca: ")
+        print()
+        if biblioteca in autobuses[7:-2]:
+            print("%s se encuentra en ----> "%(biblioteca),end="")
+            for i,j in zip(autobuses,calle):
+                if i == biblioteca:
+                    print(j)
+        else:
+            print("Esta biblioteca no existe")
+    elif opcion==4:
+         biblioteca=input("Introduce el nombre de una biblioteca: ")
+         print()
+         if biblioteca in autobuses[7:-2]:
+            print("%s tiene los siguientes horarios:"%(biblioteca))
+            print()
+            for i,j in zip(autobuses,descripcion):
+                if i == biblioteca:
+                    print(j)
+         else:
+            print("Esta biblioteca no existe")
+    elif opcion==5:
+         biblioteca=input("Introduce el nombre de una biblioteca: ")
+         print()
+         if biblioteca in autobuses[7:-2]:
+            print("%s tiene los siguientes servicios y caracteristicas:"%(biblioteca))
+            print()
+            for i,j in zip(autobuses,servicios):
+                if i == biblioteca:
+                    print(j)
+         else:
+            print("Esta biblioteca no existe")
+    if opcion==0:
+        break
